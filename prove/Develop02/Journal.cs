@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Journal
 {
-    List <Entry> entries = new List<Entry>();
+    List <Entry> _entries = new List<Entry>();
     public void AddEntry()
     {
         Entry entry = new Entry();
@@ -15,24 +15,22 @@ public class Journal
         Console.WriteLine(entry._prompt);
         Console.Write("Enter your response: ");
         entry._response = Console.ReadLine();
-        entries.Add(entry);
+        _entries.Add(entry);
     }
     public void DisplayEntries()
     {
-       foreach (Entry entry in entries)
+       foreach (Entry entry in _entries)
         {
            entry.Display();
         }
-
     }
     public void SaveEntry()
     {
         Console.Write("Please enter a filename: ");
         string filename = Console.ReadLine();
-
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-            foreach (Entry entry in entries)
+            foreach (Entry entry in _entries)
             {
                 outputFile.WriteLine($"{entry._date}, {entry._time}, {entry._prompt}, {entry._response}");
             }
@@ -43,21 +41,17 @@ public class Journal
         Console.Write("What is the name of the file?: ");
         string filename = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines(filename);
-        List <Entry> _loadedentries = new List<Entry>();
+        List <Entry> loadedEntries = new List<Entry>();
         foreach (string line in lines)
         {
             Entry entry = new Entry();
-            
-
             string[] parts = line.Split(", ");
-
             entry._date = parts[0];
             entry._time = parts[1];
             entry._prompt = parts[2];
             entry._response = parts[3];
-            _loadedentries.Add(entry);
+            loadedEntries.Add(entry);
         }
-        entries = _loadedentries;
-
+        _entries = loadedEntries;
     }
 }

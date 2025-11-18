@@ -12,6 +12,4 @@ public class Entry
         Console.WriteLine($"Date: {_date}, Time: {_time} - Prompt: {_prompt} \n{_response}");
         Console.WriteLine("");
     }
-
-    
 }
