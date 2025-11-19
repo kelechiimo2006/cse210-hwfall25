@@ -9,7 +9,6 @@ public class PromptGenerator
         "If I had one thing I could do over today, what would it be?",
         "What would you like to eat today? ",
         "Did you think to pray today? "
-
     };
 
     public string GetRandomPrompt()
