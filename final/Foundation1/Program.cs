@@ -21,11 +21,27 @@ class Program
         video1._comments.Add(comment2V1);
         _videos.Add(video1);
 
+        Video video2 = new Video()
+        video2._title = "Learn Nigerian Cooking";
+        video2._author = "Kelechi";
+        video2._length = 150;
+        Comment comment1V2 = new Comment();
+        comment1V2._name = "Karen";
+        comment1V2._text = "That looks spicy!";
+        video2._comments.Add(comment1V2);
+        
+        Comment comment2V2 = new Comment();
+        comment2V2._name = "Gary";
+        comment2V2._text = "I had this food back in the army";
+        video2._comments.Add(comment2V2);
+        _videos.Add(video2);
 
-        foreach (Video video in _author)
+
+        foreach (Video video in _videos)
         {
             Console.WriteLine($"{video._title} {video._author} {video._length}");
-            Console.WriteLine(video.AmountOfComments());
+            Console.WriteLine($" The number of comments: {video.AmountOfComments()});
+            Console.WriteLine("");
         }
     }
 }
