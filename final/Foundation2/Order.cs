@@ -8,23 +8,6 @@ public class Order
         _products = products;
         _customer = customer;
     }
-    public void SetCustomer(Customer customer)
-    {
-        _customer = customer;
-    }
-    public Customer GetCustomer()
-    {
-        return _customer;
-    }
-    public void SetProducts(List<Product> products)
-    {
-        _products = products;
-    }
-    public List<Product> GetProducts()
-    {
-        return _products;
-    }
-
     public int CalculateTotalCost()
     {
         int shippingCost;

@@ -4,15 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Address address1 = new Address("650 Spring St.", "Rexburg", "Idaho", "UK");
-        Customer customer1 = new Customer("Samuel", address1);
+        Address samuelsAddress = new Address("650 Spring St.", "Rexburg", "Idaho", "UK");
+        Customer customerSamuel = new Customer("Samuel", samuelsAddress);
         Product productA1 = new Product("Towel", 1, 5, 10);
         Product productA2 = new Product("Apple", 3, 2, 5);
-        List<Product> products1 = [productA1, productA2];
-        Order order1 = new Order(products1, customer1);
-        Console.WriteLine($"The total cost of your order + shipping is: ${order1.CalculateTotalCost()}");
-        order1.DipslayPackingLabel();
-        order1.DisplayShippingLabel();
+        List<Product> samuelsProducts = [productA1, productA2];
+        Order samuelsOrder = new Order(samuelsProducts, customerSamuel);
+        Console.WriteLine($"The total cost of your order + shipping is: ${samuelsOrder.CalculateTotalCost()}");
+        samuelsOrder.DipslayPackingLabel();
+        samuelsOrder.DisplayShippingLabel();
 
         Console.WriteLine("");
 

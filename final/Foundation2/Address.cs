@@ -12,35 +12,6 @@ public class Address
         _state = state;
         _country = country;
     }
-    public void SetStreetAddress(string streetAddress)
-    {
-        _streetAddress = streetAddress;
-    }
-    public string GetStreetAddress()
-    {
-        return _streetAddress;
-    }
-    public void SetCity(string city)
-    {
-        _city = city;
-    }
-    public string GetCity()
-    {
-        return _city;
-    }
-    public void SetState(string state)
-    {
-        _state = state;
-    }
-    public string GetState()
-    {
-        return _state;
-    }
-    public void SetCountry(string country)
-    {
-        _country = country;
-    }
-
     public string GetCountry()
     {
         return _country;

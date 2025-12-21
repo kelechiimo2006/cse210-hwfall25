@@ -1,5 +1,3 @@
-using System.Net.NetworkInformation;
-
 public class Customer
 {
     private string _name;
@@ -9,17 +7,9 @@ public class Customer
         _name = name;
         _address = address;
     }
-    public void SetName(string name)
-    {
-        _name = name;
-    }
     public string GetName()
     {
         return _name;
-    }
-    public void SetAddress(Address address)
-    {
-        _address = address;
     }
     public Address GetAddress()
     {
