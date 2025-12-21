@@ -12,21 +12,9 @@ public class Word
     {
         _isHidden = true;
     }
-    public void Show()
-    {
-        _isHidden = false; 
-    }
     public bool GetIsHidden()
     {
         return _isHidden;
-    }
-    public void SetIsHidden(bool isHidden)
-    {
-        _isHidden = isHidden;
-    }
-    public string GetSingleWord()
-    {
-        return _singleWord;
     }
     public string GetRenderedText()
     {

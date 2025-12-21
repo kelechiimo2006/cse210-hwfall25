@@ -31,7 +31,7 @@ public class Scripture
             int number = random.Next(_words.Count);
             if (_words[number].GetIsHidden() == false)
             {
-                _words[number].SetIsHidden(true);
+                _words[number].Hide();
                 _numberOfWordsHidden++;
             }
         }
