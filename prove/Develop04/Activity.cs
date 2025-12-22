@@ -8,6 +8,7 @@ public class Activity
     {
         _activityName = activityName;
         _description = description;
+        _duration = duration;
     }
     public int GetDuration()
     {
