@@ -4,7 +4,7 @@ public class Activity
     private string _description;
     private int _duration;
 
-    public Activity(string activityName, string description)
+    public Activity(string activityName, string description, int duration)
     {
         _activityName = activityName;
         _description = description;
@@ -16,6 +16,7 @@ public class Activity
 
     public void DisplayStartingMessage()
     {
+        Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName}.");
         Console.WriteLine("");
         
@@ -29,16 +30,34 @@ public class Activity
     }
     public void DisplayGetReady()
     {
-        Console.Write("Get Ready");
+        Console.WriteLine("Get Ready");
     }
     public void DipslaySpinner()
     {
-        string[] characters = {"—", """\""", """/""", "|", "—"};
-        for(int i = 0; i < 5; i++ )
+        string[] characters = {"—", """\""", """|""", "/", "—", """\""","""|""", "/", "—", """\""","""|""", "/", "—", """\"""};
+        for(int i = 0; i < 14; i++ )
         {
             Console.Write(characters[i]);
+            Thread.Sleep(500);
+            Console.Write("\b \b");
+        }
+    }
+    public void DisplayCountdown()
+    {
+        for(int i = 5; i > 0; i-- )
+        {
+            Console.Write(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
+    }
+    public void DisplayEndingMessage()
+    {
+        Console.WriteLine("Well done!!");
+        DipslaySpinner();
+        Console.WriteLine("");
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_activityName}");
+        DipslaySpinner();
+        Console.Clear();
     }
 }
