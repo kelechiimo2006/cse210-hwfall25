@@ -19,6 +19,10 @@ public class ReflectionActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
+    public ReflectionActivity(string activityName, string description, int duration) : base(activityName, description, duration)
+    {
+        
+    }
     public string GetRandomPrompt()
     {
         Random random = new Random();
@@ -33,10 +37,7 @@ public class ReflectionActivity : Activity
         _questions.Remove(_questions[number]);
         return question;
     }
-    public ReflectionActivity(string activityName, string description, int duration) : base(activityName, description, duration)
-    {
-        
-    }
+    
     public void RunActivity()
     {
         DisplayGetReady();

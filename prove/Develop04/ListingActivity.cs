@@ -1,9 +1,6 @@
 public class ListingActivity : Activity
 {
-    public ListingActivity(string activityName, string description, int duration) : base(activityName, description, duration)
-    {
     
-    }
     private List<string> _prompts = new List<string>()
     {
         "Who are people that you appreciate?",
@@ -13,6 +10,10 @@ public class ListingActivity : Activity
         "Who are some of your personal heroes?"
     };
     private List<string> _responses = new List<string>();
+    public ListingActivity(string activityName, string description, int duration) : base(activityName, description, duration)
+    {
+    
+    }
     public string GetRandomPrompt()
     {
         Random random = new Random();
