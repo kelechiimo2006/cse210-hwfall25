@@ -3,7 +3,7 @@ public abstract class Exercise
     private string _date;
     private double _length;
 
-    public Exercise(string date, int length)
+    public Exercise(string date, double length)
     {
         _date = date;
         _length = length;
@@ -17,7 +17,7 @@ public abstract class Exercise
     }
     public string GetSummary()
     {
-        string summary = $"{_date} {GetType().Name} ({_length} min)- Distance {GetDistance():F2} miles,  Speed {GetSpeed():F1} mph, Pace: {GetPace():F2} min per mile";
+        string summary = $"{_date} {GetType().Name} ({_length} min)- Distance {GetDistance():F1} miles,  Speed {GetSpeed():F1} mph, Pace: {GetPace():F1} min per mile";
         return summary;
     }
 }

@@ -1,7 +1,7 @@
 public class Cycling : Exercise
 {
     private int _speed;
-    public Cycling(string date, int length, int speed) : base(date,length)
+    public Cycling(string date, double length, int speed) : base(date,length)
     {
        _speed = speed;
     }
